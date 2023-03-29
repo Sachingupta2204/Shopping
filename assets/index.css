@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* FontSize  */
+.fsize12 {
+  font-size: 12px;
+}
+.fsize14 {
+  font-size: 14px;
+}
+.fsize16 {
+  font-size: 16px;
+}
+.fsize20 {
+  font-size: 20px;
+}
+.fsize24 {
+  font-size: 24px;
+}
+.fsize36 {
+  font-size: 36px;
+}
+@media screen and (max-width: 768) and (min-width: 426) {
+  .md-fsize12 {
+    font-size: 12px;
+  }
+  .md-fsize14 {
+    font-size: 14px;
+  }
+  .md-fsize16 {
+    font-size: 16px;
+  }
+  .md-fsize20 {
+    font-size: 20px;
+  }
+  .md-fsize24 {
+    font-size: 24px;
+  }
+  .md-fsize36 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 425) {
+  .sm-fsize12 {
+    font-size: 12px;
+  }
+  .sm-fsize14 {
+    font-size: 14px;
+  }
+  .sm-fsize16 {
+    font-size: 16px;
+  }
+  .sm-fsize20 {
+    font-size: 20px;
+  }
+  .sm-fsize24 {
+    font-size: 24px;
+  }
+  .sm-fsize36 {
+    font-size: 36px;
+  }
+}
+
+.cardDiv {
+  width: 100px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#default{
+    text-align:center;
+  }
