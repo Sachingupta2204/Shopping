@@ -63,12 +63,11 @@ body {
   }
 }
 
-.cardDiv {
-  width: 100px;
-  height: 200px;
-  border: 1px solid black;
+.btnn {
+    border: 2px solid black;
+    padding: 5px 10px;
 }
 
-#default{
-    text-align:center;
-  }
+.h-500 {
+    height: 500px;
+}
