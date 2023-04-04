@@ -1,255 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    
 
-  <link rel="stylesheet" href="./assets/index.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-    crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@6.5.4/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@6.5.4/swiper-bundle.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/swiper@6.5.4/swiper-bundle.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home Page</title>
+    <style>
+      .product-thumbs .swiper-slide img {
+        border: 2px solid transparent;
+        object-fit: cover;
+        cursor: pointer;
+      }
 
+      .product-thumbs .swiper-slide-active img {
+        border-color: #bc4f38;
+      }
 
+      .product-slider .swiper-button-next:after,
+      .product-slider .swiper-button-prev:after {
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+      }
+    </style>
+  </head>
 
+  <body>
+    <section>
+      <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid h-20">
+          <div class="flex gap-4">
+            <i class="fa-regular fa-heart w-4 h-4"></i>
+            <i class="fa-regular fa-user w-4 h-4"></i>
+            <i class="fa-solid fa-magnifying-glass w-4 h-4"></i>
+            <i class="fa-solid fa-bag-shopping w-4 h-4"></i>
+          </div>
 
-  <title>Home Page</title>
-  <style>
-    .product-thumbs .swiper-slide img {
-      border: 2px solid transparent;
-      object-fit: cover;
-      cursor: pointer;
-    }
+          <a class="navbar-brand" href="#">Title</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    .product-thumbs .swiper-slide-active img {
-      border-color: #bc4f38;
-    }
-
-    .product-slider .swiper-button-next:after,
-    .product-slider .swiper-button-prev:after {
-      font-size: 20px;
-      color: #000;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-
-<body>
-  <section>
-    <nav class="navbar bg-body-tertiary fixed-top">
-      <div class="container-fluid h-20">
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <form class="d-flex mt-3" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Winter Sale</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Shop
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Shop1</a></li>
+                    <li><a class="dropdown-item" href="#">Shop2</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Track Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section>
+      <div class="container-fluid mt-28">
         <div class="flex gap-4">
-          <i class="fa-regular fa-heart w-4 h-4"></i>
-          <i class="fa-regular fa-user w-4 h-4"></i>
-          <i class="fa-solid fa-magnifying-glass w-4 h-4"></i>
-          <i class="fa-solid fa-bag-shopping w-4 h-4"></i>
-        </div>
+          <div class="w-1/2">
+            <div class="w-4/5 mx-auto product-left mb-5 mb-lg-0">
+              <div class="">
+                <div class="swiper-container product-slider mb-3 h-500">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1-qzpXz-6SaqM3IPlQl_d9YXaPaBPw1xi"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1GyPJxF36hlp2JS7SeYrnW0Bmuc9KJyBq"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1MIbogRkUdngQXnaXT8Mufup-7CScTNRj"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1a_w8OcDV-IA5UMz7usKtO_lXf0YSee3u"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1gLp3gryMbGYpgAfAtnDGccME1lCzEyUU"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1iOOVa8mOrESI0o5o7au7nAOlPFAwbnLM"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
 
-        <a class="navbar-brand" href="#">Title</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+                <div class="swiper-container product-thumbs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1-qzpXz-6SaqM3IPlQl_d9YXaPaBPw1xi"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1GyPJxF36hlp2JS7SeYrnW0Bmuc9KJyBq"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1MIbogRkUdngQXnaXT8Mufup-7CScTNRj"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1a_w8OcDV-IA5UMz7usKtO_lXf0YSee3u"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1gLp3gryMbGYpgAfAtnDGccME1lCzEyUU"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://drive.google.com/uc?id=1iOOVa8mOrESI0o5o7au7nAOlPFAwbnLM"
+                        alt="..."
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Winter Sale</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">New</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Shop
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Shop1</a></li>
-                  <li><a class="dropdown-item" href="#">Shop2</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Track Order</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-            </ul>
+          <div class="w-1/2">
+            <div class="">
+              <h2 class="fsize36">Title</h2>
+              <div class="flex gap-2 pt-2 pb-4">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>Rs. 1234</p>
+              <p>Descpriction</p>
+              <span class="fsize12"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+              >
+
+              <div class="">
+                <p class="fsize16 pb-2 pt-4">COLOR</p>
+                <button class="btnn">Black</button>
+              </div>
+              <div class="">
+                <p class="fsize16 pb-2 pt-4">SIZE</p>
+                <div class="flex gap-2">
+                  <button class="btnn">S</button>
+                  <button class="btnn">M</button>
+                  <button class="btnn">L</button>
+                </div>
+              </div>
+              <div class="">
+                <p class="fsize16 pb-2 pt-4">QUANTITY</p>
+                <div class="inline-block">
+                  <div class="flex gap-2 items-center border px-2">
+                    <button class="">-</button>
+                    <p>1</p>
+                    <button class="">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
-  </section>
-  <section>
-    <div class="container-fluid  mt-28">
-      <div class="flex gap-4">
-        <div class="w-1/2">
+    </section>
 
-          <div class="w-4/5 mx-auto product-left mb-5 mb-lg-0 ">
-            <div class="">
-              <div class="swiper-container product-slider mb-3 h-500">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1-qzpXz-6SaqM3IPlQl_d9YXaPaBPw1xi" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1GyPJxF36hlp2JS7SeYrnW0Bmuc9KJyBq" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1MIbogRkUdngQXnaXT8Mufup-7CScTNRj" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1a_w8OcDV-IA5UMz7usKtO_lXf0YSee3u" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1gLp3gryMbGYpgAfAtnDGccME1lCzEyUU" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1iOOVa8mOrESI0o5o7au7nAOlPFAwbnLM" alt="..."
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-
-              <div class="swiper-container product-thumbs">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1-qzpXz-6SaqM3IPlQl_d9YXaPaBPw1xi" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1GyPJxF36hlp2JS7SeYrnW0Bmuc9KJyBq" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1MIbogRkUdngQXnaXT8Mufup-7CScTNRj" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1a_w8OcDV-IA5UMz7usKtO_lXf0YSee3u" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1gLp3gryMbGYpgAfAtnDGccME1lCzEyUU" alt="..."
-                      class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://drive.google.com/uc?id=1iOOVa8mOrESI0o5o7au7nAOlPFAwbnLM" alt="..."
-                      class="img-fluid">
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="w-1/2">
-          <div class="">
-            <h2 class="fsize36">Title</h2>
-            <div class="flex gap-2 pt-2 pb-4">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>Rs. 1234</p>
-            <p>Descpriction</p>
-            <span class="fsize12">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-
-            <div class="">
-              <p class="fsize16 pb-2 pt-4">COLOR</p>
-              <button class="btnn">Black</button>
-            </div>
-            <div class="">
-              <p class="fsize16 pb-2 pt-4">SIZE</p>
-              <div class="flex gap-2">
-                <button class="btnn">S</button>
-                <button class="btnn">M</button>
-                <button class="btnn">L</button>
-              </div>
-            </div>
-            <div class="">
-              <p class="fsize16 pb-2 pt-4">QUANTITY</p>
-              <div class="inline-block ">
-                <div class="flex gap-2 items-center border px-2">
-                  <button class="">-</button>
-                  <p>1</p>
-                  <button class="">+</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <script>if ($(".product-left").length) {
-      var productSlider = new Swiper('.product-slider', {
-        spaceBetween: 0,
-        centeredSlides: false,
-        loop: true,
-        direction: 'horizontal',
-        loopedSlides: 5,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        resizeObserver: true,
-      });
-      var productThumbs = new Swiper('.product-thumbs', {
-        spaceBetween: 0,
-        centeredSlides: true,
-        loop: true,
-        slideToClickedSlide: true,
-        direction: 'horizontal',
-        slidesPerView: 5,
-        loopedSlides: 5,
-      });
-      productSlider.controller.control = productThumbs;
-      productThumbs.controller.control = productSlider;
-
-
-
-
-    }</script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@6.5.4/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      if ($(".product-left").length) {
+        var productSlider = new Swiper(".product-slider", {
+          spaceBetween: 0,
+          centeredSlides: false,
+          loop: true,
+          direction: "horizontal",
+          loopedSlides: 5,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          resizeObserver: true,
+        });
+        var productThumbs = new Swiper(".product-thumbs", {
+          spaceBetween: 0,
+          centeredSlides: true,
+          loop: true,
+          slideToClickedSlide: true,
+          direction: "horizontal",
+          slidesPerView: 5,
+          loopedSlides: 5,
+        });
+        productSlider.controller.control = productThumbs;
+        productThumbs.controller.control = productSlider;
+      }
+    </script>
+  </body>
 </html>
