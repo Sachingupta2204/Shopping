@@ -12,7 +12,6 @@
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    
 
     <link
       rel="stylesheet"
@@ -120,7 +119,7 @@
                   <a class="nav-link" href="#">Track Order</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact Us</a>
+                  <a class="nav-link" href="/Contact.html">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -129,12 +128,12 @@
       </nav>
     </section>
     <section>
-      <div class="container-fluid mt-28">
-        <div class="flex gap-4">
-          <div class="w-1/2">
-            <div class="w-4/5 mx-auto product-left mb-5 mb-lg-0">
+      <!-- <div class="container-fluid mt-28">
+        <div class="lg:flex gap-4">
+          <div class="lg:w-1/2">
+            <div class="lg:w-4/5 mx-auto product-left mb-5 mb-lg-0">
               <div class="">
-                <div class="swiper-container product-slider mb-3 h-500">
+                <div class="swiper-container product-slider mb-3 h-500 sm-h-250">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <img
@@ -232,10 +231,10 @@
               </div>
             </div>
           </div>
-          <div class="w-1/2">
-            <div class="">
-              <h2 class="fsize36">Title</h2>
-              <div class="flex gap-2 pt-2 pb-4">
+          <div class="lg:w-1/2">
+            <div class="lg:text-left ">
+              <h2 class="fsize36 ">Title</h2>
+              <div class="flex lg:justify-start  justify-center gap-2 pt-2 pb-4">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -254,7 +253,7 @@
               </div>
               <div class="">
                 <p class="fsize16 pb-2 pt-4">SIZE</p>
-                <div class="flex gap-2">
+                <div class="flex lg:justify-start justify-center gap-2">
                   <button class="btnn">S</button>
                   <button class="btnn">M</button>
                   <button class="btnn">L</button>
@@ -263,17 +262,60 @@
               <div class="">
                 <p class="fsize16 pb-2 pt-4">QUANTITY</p>
                 <div class="inline-block">
-                  <div class="flex gap-2 items-center border px-2">
-                    <button class="">-</button>
-                    <p>1</p>
-                    <button class="">+</button>
+                  <div class="flex gap-2 items-center justify-center border h-8 w-16">
+                
+                    <button type="button" onClick="onClick1()">-</button>
+                    <p> <a id="clicks">0</a></p>
+                    <button type="button" onClick="onClick()">+</button>
                   </div>
                 </div>
               </div>
+              <div class="my-8">
+                <button type="button" class="btn btn-outline-dark w-full mb-2">ADD TO CART</button><br>
+                <button type="button" class="btn btn-outline-dark w-full">ADD TO WISHLIST</button>
+              </div>
+              <div class="">
+                <h3 class="fsize20 text-center">Size Chart</h3>
+                <table class="table table-bordered mt-4 text-center">
+                  <thead>
+                    <tr>
+                      <th scope="col">SIZE</th>
+                      <th scope="col">CHEST</th>
+                      <th scope="col">LENGTH</th>
+                      <th scope="col">SHOULDER</th>
+                      <th scope="col">SLEEVE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th >2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th >3</th>
+                      <td >Larry the Bird</td>
+                      <td>@twitter</td>
+                      <td >Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+            
           </div>
+
+          
         </div>
-      </div>
+      </div> -->
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -304,6 +346,18 @@
         });
         productSlider.controller.control = productThumbs;
         productThumbs.controller.control = productSlider;
+      }
+
+      var clicks = 0;
+
+      function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+      }
+
+      function onClick1() {
+        clicks -= 1;
+        document.getElementById("clicks").innerHTML = clicks;
       }
     </script>
   </body>

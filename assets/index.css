@@ -5,6 +5,38 @@ body {
   padding: 0;
   font-family: "TwentiethCentury";
 }
+.flex{
+  display: flex;
+}
+.red {
+  width: 120px;
+  height: 120px;
+  background: url('/assets/Images/j.png') no-repeat ;
+  position: absolute;
+  top: 0;
+  border-radius: 50px 50px;
+}
+.green {
+  width: 80px;
+  height: 80px;
+  background: url("/assets/Images/Job.png") no-repeat ;
+  transition-property: width;
+  transition-duration: 500ms;
+  transition-delay: 250ms;
+  border-radius: 50px 50px;
+}
+.red:hover + .green {
+  width: 350px;
+  border-radius: 50px 50px 50px 50px;
+}
+
+  
+  
+  
+  
+  
+
+  
 
 /* FontSize  */
 .fsize12 {
@@ -48,7 +80,7 @@ body {
     font-size: 36px;
   }
 }
-@media screen and (max-width: 425) {
+@media screen and (max-width: 425px) {
   .sm-fsize12 {
     font-size: 12px;
   }
@@ -67,11 +99,18 @@ body {
   .sm-fsize36 {
     font-size: 36px;
   }
+
+  .px5 {
+    padding: 0 1.25rem;
+  }
+  .sm-h-250 {
+    height: 250px !important;
+  }
 }
 
 .btnn {
-  border: 2px solid black;
-  padding: 5px 10px;
+  border: 1px solid black;
+  padding: 5px 15px;
 }
 
 .btnn1 {
@@ -121,4 +160,10 @@ body {
 }
 .checked{
   color: orange;
+}
+
+.inp {
+  border: 1px solid #e8e8e1;
+  margin-top: 0.5rem;
+  width: 100%;
 }
